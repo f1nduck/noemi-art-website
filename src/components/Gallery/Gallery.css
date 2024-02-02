@@ -1,13 +1,15 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
+  align-items: center;
 }
 
 .gallery-image {
+  margin-left: 10px;
   width: 100%;
   height: auto;
-  max-width: 300px;
+  max-width: 500px;
   cursor: pointer;
 }
 
@@ -36,7 +38,7 @@
 .close-button {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 20px;
   font-size: 40px;
   color: #fff;
   cursor: pointer;

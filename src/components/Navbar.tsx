@@ -15,30 +15,28 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div>
-        <h1>
-          {" "}
-          <img
-            src="src\assets\images\paintbrush-icon.png"
-            alt="Paintbrush Icon"
-            width={40}
-            height={40}
-          ></img>
-          Mrs Chimkin Art
-        </h1>
+        {" "}
+        <img id="title-icon"
+          src="src\assets\images\noemileah-art-banner.png"
+          alt="Noemileah-navbar"
+          width={300}
+          height={100}
+        ></img>
       </div>
+
       <div
         className="nav-item"
         onMouseOver={handleMouseOver}
         onMouseLeave={handleMouseLeave}
       >
-        <button>Photography</button>
+        <button>Portfolio</button>
         {dropdownVisible && (
           <div className="dropdown">
             <a href="https://pyxis.nymag.com/v1/imgs/2cb/2e1/47a72da70b3f7a301273b06cac9ea615c8-06-bob-ross-painting.rsquare.w400.jpg">
-              Bobkins
+              Paintings
             </a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <a href="#">Illustrations</a>
+            <a href="#">Sketchbook</a>
           </div>
         )}
       </div>
@@ -48,16 +46,19 @@ const Navbar = () => {
         onMouseOver={handleMouseOver}
         onMouseLeave={handleMouseLeave}
       >
-        <button>Paintings</button>
-        {dropdownVisible && (
-          <div className="dropdown">
-            <a href="#">Link 4</a>
-            <a href="#">Link 5</a>
-            <a href="#">Link 6</a>
-          </div>
-        )}
+        <button>About</button>
       </div>
-    </div>
+
+      <div
+        className="nav-item"
+        onMouseOver={handleMouseOver}
+        onMouseLeave={handleMouseLeave}
+      >
+        <button>Contact</button>
+      </div>
+
+      </div>
+    
   );
 };
 
