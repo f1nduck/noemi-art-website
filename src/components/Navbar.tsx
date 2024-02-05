@@ -33,9 +33,9 @@ const Navbar = () => {
         {dropdownVisible && (
           <div className="dropdown">
             <a href="https://pyxis.nymag.com/v1/imgs/2cb/2e1/47a72da70b3f7a301273b06cac9ea615c8-06-bob-ross-painting.rsquare.w400.jpg">
-              Paintings
+              Fine Art
             </a>
-            <a href="#">Illustrations</a>
+            <a href="#">Commissions</a>
             <a href="#">Sketchbook</a>
           </div>
         )}
