@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import './Gallery.css';
 
 interface GalleryProps {
-  images: string[]; // An array of image URLs
+  images: { url: string; description: string }[]; // An array of image objects with URL and description
 }
 
 const Gallery: React.FC<GalleryProps> = ({ images }) => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<{ url: string; description: string } | null>(null);
 
-  const openImage = (imageUrl: string) => {
-    setSelectedImage(imageUrl);
+  const openImage = (imageUrl: string, imageDescription: string) => {
+    setSelectedImage({ url: imageUrl, description: imageDescription });
   };
 
   const closeImage = () => {
@@ -19,13 +19,13 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
   return (
     <div>
       <div className="gallery">
-        {images.map((imageUrl, index) => (
+        {images.map((image, index) => (
           <img
             key={index}
-            src={imageUrl}
+            src={image.url}
             alt={`Image ${index}`}
             className="gallery-image"
-            onClick={() => openImage(imageUrl)}
+            onClick={() => openImage(image.url, image.description)}
           />
         ))}
       </div>
@@ -33,10 +33,11 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
       {selectedImage && (
         <div className="overlay" onClick={closeImage}>
           <div className="modal">
-            <img src={selectedImage} alt="Enlarged Image" className="modal-image" />
+            <img src={selectedImage.url} alt="Enlarged Image" className="modal-image" />
             <span className="close-button" onClick={closeImage}>
               &times;
             </span>
+            <div className="modal-description">{selectedImage.description}</div>
           </div>
         </div>
       )}
