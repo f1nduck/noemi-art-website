@@ -1,11 +1,12 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Gallery from "./components/Gallery/Gallery";
+import Footer from "./components/Footer";
 
 function App() {
 
   const images = [
-    { url: 'src/assets/images/paintings/castlegate.jpg', description: 'Description 1' },
+    { url: 'src/assets/images/paintings/castlegate.jpg', description: 'Castlegate, Aberdeen' },
     { url: 'src/assets/images/paintings/christmas_market.jpg', description: 'Description 2' },
     { url: 'src/assets/images/paintings/sergels.jpg', description: 'Description 3' },
     { url: 'src/assets/images/paintings/kungstradgarden.jpg', description: 'Description 4' },
@@ -21,10 +22,14 @@ function App() {
     { url: 'src/assets/images/paintings/toucan.jpg', description: 'Description 14' },
   ];
   
+  const artistEmail = 'noemileahn@gmail.com';
+  const instagramLink = 'https://www.instagram.com/noemileah';
+  
   return (
     <div className="App">
       <Navbar />
       <Gallery images={images}/>
+      <Footer artistEmail={artistEmail} instagramLink={instagramLink} />
     </div>
   );
 }

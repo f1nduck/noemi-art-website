@@ -17,10 +17,10 @@ const Navbar = () => {
       <div>
         {" "}
         <img id="title-icon"
-          src="src\assets\images\noemileah-art-banner.png"
+          src="src\assets\images\noemileah-navbar.png"
           alt="Noemileah-navbar"
-          width={300}
-          height={100}
+          width={800}
+          height={228}
         ></img>
       </div>
 
