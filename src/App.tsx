@@ -22,8 +22,42 @@ function App() {
     { url: 'src/assets/images/paintings/toucan.jpg', description: 'Description 14' },
   ];
   
+  const fineArt = [
+    { url: 'src/assets/images/paintings/castlegate.jpg', description: 'Castlegate, Aberdeen' },
+    { url: 'src/assets/images/paintings/christmas_market.jpg', description: 'Description 2' },
+    { url: 'src/assets/images/paintings/sergels.jpg', description: 'Description 3' },
+    { url: 'src/assets/images/paintings/kungstradgarden.jpg', description: 'Description 4' },
+    { url: 'src/assets/images/paintings/krakow.jpg', description: 'Description 5' },
+    { url: 'src/assets/images/paintings/kiss.jpg', description: 'Description 6' },
+    { url: 'src/assets/images/paintings/bottle.jpg', description: 'Description 7' },
+    { url: 'src/assets/images/paintings/jellyfish.jpg', description: 'Description 8' },
+    { url: 'src/assets/images/paintings/noemi.jpg', description: 'Description 9' },
+    { url: 'src/assets/images/paintings/horse.jpg', description: 'Description 10' },
+    { url: 'src/assets/images/paintings/bjork.jpg', description: 'Description 11' },
+    { url: 'src/assets/images/paintings/kitchen_table.jpg', description: 'Description 12' },
+    { url: 'src/assets/images/paintings/mushrooms.png', description: 'Description 13' },
+    { url: 'src/assets/images/paintings/toucan.jpg', description: 'Description 14' },
+  ];
+
+  const commissions = [
+    { url: 'src/assets/images/commissions/vaglost12a.jpg', description: 'Castlegate, Aberdeen' },
+    { url: 'src/assets/images/commissions/vaglost12a.jpg', description: 'Description 2' },
+    { url: 'src/assets/images/commissions/vaglost12a.jpg', description: 'Description 3' },
+    { url: 'src/assets/images/commissions/vaglost12a.jpg', description: 'Description 4' },
+    { url: 'src/assets/images/commissions/vaglost12a.jpg', description: 'Description 5' },
+    { url: 'src/assets/images/commissions/vaglost12a.jpg', description: 'Description 6' },
+    { url: 'src/assets/images/commissions/vaglost12a.jpg', description: 'Description 7' },
+  ];
+
+  const sketchbook = [
+    { url: 'src/assets/images/sketchbook/besties.jpg', description: 'Castlegate, Aberdeen' },
+    { url: 'src/assets/images/sketchbook/besties.jpg', description: 'Description 2' },
+    { url: 'src/assets/images/sketchbook/besties.jpg', description: 'Description 3' },
+    { url: 'src/assets/images/sketchbook/besties.jpg', description: 'Description 4' },
+  ];
+
   const artistEmail = 'noemileahn@gmail.com';
-  const instagramLink = 'https://www.instagram.com/noemileah';
+  const instagramLink = 'https://www.instagram.com/noemileah_art';
   
   return (
     <div className="App">
