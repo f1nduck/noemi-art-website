@@ -56,3 +56,29 @@
   color: #fff;
   cursor: pointer;
 }
+
+.modal-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  border: none;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+}
+
+.modal-button:hover {
+  background-color: rgba(255, 255, 255, 0.7); /* Slightly more opaque when hovered */
+}
+
+.previous {
+  left: -140px;
+}
+
+.next {
+  right: -100px;
+}
+

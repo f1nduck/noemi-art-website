@@ -6,14 +6,28 @@ interface GalleryProps {
 }
 
 const Gallery: React.FC<GalleryProps> = ({ images }) => {
-  const [selectedImage, setSelectedImage] = useState<{ url: string; description: string } | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
-  const openImage = (imageUrl: string, imageDescription: string) => {
-    setSelectedImage({ url: imageUrl, description: imageDescription });
+  const openImage = (index: number) => {
+    setSelectedImageIndex(index);
   };
 
   const closeImage = () => {
-    setSelectedImage(null);
+    setSelectedImageIndex(null);
+  };
+
+  const showNextImage = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    if (selectedImageIndex !== null && selectedImageIndex < images.length - 1) {
+      setSelectedImageIndex(selectedImageIndex + 1);
+    }
+  };
+
+  const showPreviousImage = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    if (selectedImageIndex !== null && selectedImageIndex > 0) {
+      setSelectedImageIndex(selectedImageIndex - 1);
+    }
   };
 
   return (
@@ -25,19 +39,22 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
             src={image.url}
             alt={`Image ${index}`}
             className="gallery-image"
-            onClick={() => openImage(image.url, image.description)}
+            onClick={() => openImage(index)}
           />
         ))}
       </div>
 
-      {selectedImage && (
+      {selectedImageIndex !== null && (
         <div className="overlay" onClick={closeImage}>
           <div className="modal">
-            <img src={selectedImage.url} alt="Enlarged Image" className="modal-image" />
+            <img src={images[selectedImageIndex].url} alt="Enlarged Image" className="modal-image" />
             <span className="close-button" onClick={closeImage}>
               &times;
             </span>
-            <div className="modal-description">{selectedImage.description}</div>
+            <div className="modal-description">{images[selectedImageIndex].description}</div>
+            <button className="modal-button previous" onClick={showPreviousImage}>Previous</button>
+            <button className="modal-button next" onClick={showNextImage}>Next</button>
+            
           </div>
         </div>
       )}
