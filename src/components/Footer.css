@@ -1,38 +1,43 @@
-/* footer.css */
-
 footer {
-    background-color: #3671b198;
-    color: #fff;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: left;
-  }
-  
-  .brand-icon img {
-    width: 10%; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px;
-  }
-  
-  .contact {
-    margin-top: 20px;
-  }
-  
-  .contact button,
-  .contact a {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    margin-right: 20px;
-    margin-left: 10px;
-    font-size: 50px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .contact button:hover,
-  .contact a:hover {
-    color: #5f6ae1b1; /* Change color on hover */
-  }
-  
+  display: flex;
+  justify-content: space-between; /* Align items to the start and end of the container */
+  background-color: #ffffff;
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.brand-icon {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.brand-icon img {
+  width: 40%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px;
+}
+
+.contact {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.contact button,
+.contact a {
+  background-color: transparent;
+  border: none;
+  color: #030000;
+  margin-right: 20px;
+  margin-left: 10px;
+  font-size: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.contact button:hover,
+.contact a:hover {
+  color: #5f6ae1b1; /* Change color on hover */
+}
