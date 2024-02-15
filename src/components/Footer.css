@@ -34,10 +34,10 @@ footer {
   font-size: 50px;
   text-decoration: none;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 .contact button:hover,
 .contact a:hover {
-  color: #5f6ae1b1; /* Change color on hover */
+  color: #797979fb; /* Change color on hover */
 }
