@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ setImages, fineArt, commissions, sketchbook }) => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const handleMouseOver = () => {
@@ -12,12 +12,25 @@ const Navbar = () => {
     setDropdownVisible(false);
   };
 
+  const handleFineArtClick = () => {
+    setImages(fineArt);
+  };
+
+  const handleCommissionsClick = () => {
+    setImages(commissions);
+  };
+
+  const handleSketchbookClick = () => {
+    setImages(sketchbook);
+  };
+
   return (
     <div className="navbar">
       <div>
         {" "}
-        <img id="title-icon"
-          src="src\assets\images\noemileah-navbar.png"
+        <img
+          id="title-icon"
+          src="src\assets\images\logo1.png"
           alt="Noemileah-navbar"
           width={800}
           height={228}
@@ -32,33 +45,25 @@ const Navbar = () => {
         <button>Portfolio</button>
         {dropdownVisible && (
           <div className="dropdown">
-            <a href="https://pyxis.nymag.com/v1/imgs/2cb/2e1/47a72da70b3f7a301273b06cac9ea615c8-06-bob-ross-painting.rsquare.w400.jpg">
-              Fine Art
+            <a href="#" onClick={handleFineArtClick}>Fine Art</a>
+            <a href="#" onClick={handleCommissionsClick}>
+              Commissions
             </a>
-            <a href="#">Commissions</a>
-            <a href="#">Sketchbook</a>
+            <a href="#" onClick={handleSketchbookClick}>
+              Sketchbook
+            </a>
           </div>
         )}
       </div>
 
-      <div
-        className="nav-item"
-        onMouseOver={handleMouseOver}
-        onMouseLeave={handleMouseLeave}
-      >
+      <div className="nav-item" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
         <button>About</button>
       </div>
 
-      <div
-        className="nav-item"
-        onMouseOver={handleMouseOver}
-        onMouseLeave={handleMouseLeave}
-      >
+      <div className="nav-item" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
         <button>Contact</button>
       </div>
-
-      </div>
-    
+    </div>
   );
 };
 
