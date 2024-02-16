@@ -28,9 +28,11 @@
 
 .modal {
   position: relative;
+  display: inline-block; /* Ensure the modal only takes up the space it needs */
 }
 
 .modal-image {
+  position: relative;
   max-width: 90vw;
   max-height: 90vh;
 }
@@ -50,17 +52,22 @@
 
 .close-button {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 10px; /* Adjust top position to place it in the top-right corner */
+  right: 10px; /* Adjust right position to place it in the top-right corner */
   font-size: 40px;
   color: #fff;
   cursor: pointer;
 }
 
-.modal-button {
+.modal-button-container {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 20px;
+  width: 100%; /* Occupy full width */
+  display: flex;
+  justify-content: center;
+}
+
+.modal-button {
   font-size: 20px;
   padding: 10px 20px;
   background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
@@ -68,17 +75,9 @@
   border-radius: 5px;
   color: black;
   cursor: pointer;
+  margin: 0 5px; /* Adjust the spacing between buttons */
 }
 
 .modal-button:hover {
   background-color: rgba(255, 255, 255, 0.7); /* Slightly more opaque when hovered */
 }
-
-.previous {
-  left: -140px;
-}
-
-.next {
-  right: -100px;
-}
-

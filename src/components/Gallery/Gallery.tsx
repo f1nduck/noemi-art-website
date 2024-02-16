@@ -75,8 +75,10 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
               &times;
             </span>
             <div className="modal-description">{images[selectedImageIndex].description}</div>
-            <button className="modal-button previous" onClick={showPreviousImage}>Previous</button>
-            <button className="modal-button next" onClick={showNextImage}>Next</button>
+            <div className="modal-button-container">
+              <button className="modal-button previous" onClick={showPreviousImage}>{'\u02c2'}</button>
+              <button className="modal-button next" onClick={showNextImage}>{'\u02c3'}</button>
+            </div>
           </div>
         </div>
       )}
