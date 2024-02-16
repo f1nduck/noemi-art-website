@@ -1,12 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Gallery.css';
 
 interface GalleryProps {
-  images: { url: string; description: string }[]; // An array of image objects with URL and description
+  images: { url: string; description: string }[];
 }
 
 const Gallery: React.FC<GalleryProps> = ({ images }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (selectedImageIndex !== null) {
+        switch (event.key) {
+          case 'ArrowLeft':
+            showPreviousImage(event);
+            break;
+          case 'ArrowRight':
+            showNextImage(event);
+            break;
+          default:
+            break;
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedImageIndex]); // Re-add the event listener if selectedImageIndex changes
 
   const openImage = (index: number) => {
     setSelectedImageIndex(index);
@@ -16,14 +39,14 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
     setSelectedImageIndex(null);
   };
 
-  const showNextImage = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const showNextImage = (event: React.MouseEvent<HTMLButtonElement> | KeyboardEvent) => {
     event.stopPropagation();
     if (selectedImageIndex !== null && selectedImageIndex < images.length - 1) {
       setSelectedImageIndex(selectedImageIndex + 1);
     }
   };
 
-  const showPreviousImage = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const showPreviousImage = (event: React.MouseEvent<HTMLButtonElement> | KeyboardEvent) => {
     event.stopPropagation();
     if (selectedImageIndex !== null && selectedImageIndex > 0) {
       setSelectedImageIndex(selectedImageIndex - 1);
@@ -54,7 +77,6 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
             <div className="modal-description">{images[selectedImageIndex].description}</div>
             <button className="modal-button previous" onClick={showPreviousImage}>Previous</button>
             <button className="modal-button next" onClick={showNextImage}>Next</button>
-            
           </div>
         </div>
       )}
