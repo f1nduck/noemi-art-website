@@ -33,8 +33,8 @@
 
 .modal-image {
   position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
+  max-width: 80vw;
+  max-height: 80vh;
 }
 
 .modal-description {
@@ -60,12 +60,16 @@
 }
 
 .modal-button-container {
-  position: absolute;
-  bottom: -height;
-  width: 100%; /* Occupy full width */
+  position: fixed;
+  bottom: 20px; /* Adjust the distance from the bottom of the screen */
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
   display: flex;
   justify-content: center;
 }
+
+
 
 .modal-button {
   font-size: 20px;
