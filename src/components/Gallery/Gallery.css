@@ -61,7 +61,7 @@
 
 .modal-button-container {
   position: absolute;
-  bottom: 20px;
+  bottom: -height;
   width: 100%; /* Occupy full width */
   display: flex;
   justify-content: center;
