@@ -11,12 +11,7 @@ footer {
 .brand-icon {
   display: flex;
   align-items: center; /* Align items vertically */
-}
-
-.brand-icon img {
-  width: 40%; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-bottom: 10px;
+  position: relative;
 }
 
 .contact {
@@ -40,4 +35,22 @@ footer {
 .contact button:hover,
 .contact a:hover {
   color: #797979fb; /* Change color on hover */
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #030000;
+  margin-left: -260px;
+}
+
+.brand-icon img {
+  width: 40%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px;
 }

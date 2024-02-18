@@ -38,17 +38,18 @@
 }
 
 .modal-description {
-  position: absolute;
-  bottom: 10px;
+  position: fixed;
+  bottom: 15%;
+  left: 30px; /* Adjust the distance from the left side of the screen */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
-  left: -300px; /* Adjust the distance from the image as needed */
   width: 280px; /* Adjust the width as needed */
-  background-color: rgba(2, 0, 0, 0); /* Semi-transparent black background */
+  background-color: rgba(2, 0, 0, 0.5); /* Semi-transparent black background */
   color: white;
   padding: 10px; /* Adjust padding as needed */
   box-sizing: border-box;
 }
+
 
 .close-button {
   position: absolute;
