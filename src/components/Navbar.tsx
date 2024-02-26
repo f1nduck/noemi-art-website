@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 
-const Navbar = ({ setImages, fineArt, commissions, sketchbook }) => {
+interface NavbarProps {
+  setImages: (images: any) => void; // Adjust 'any' to the appropriate type if possible
+  fineArt: any; // Adjust 'any' to the appropriate type if possible
+  commissions: any; // Adjust 'any' to the appropriate type if possible
+  sketchbook: any; // Adjust 'any' to the appropriate type if possible
+}
+
+const Navbar: React.FC<NavbarProps> = ({ setImages, fineArt, commissions, sketchbook }) => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const handleMouseOver = () => {
