@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Gallery from "./components/Gallery/Gallery";
 import Footer from "./components/Footer";
+import About from "./components/About";
 
 function App() {
   const [images, setImages] = useState([
@@ -59,11 +60,28 @@ function App() {
 
   const artistEmail = 'noemileahn@gmail.com';
   const instagramLink = 'https://www.instagram.com/noemileah_art';
+
+  const [currentComponent, setCurrentComponent] = useState("Gallery"); // Initial state is Gallery
   
+
+  // Function to switch to the Gallery component
+  const switchToGallery = () => {
+    setCurrentComponent("Gallery");
+  };
+
+  // Function to switch to the About component
+  const switchToAbout = () => {
+    setCurrentComponent("About");
+  };
+
   return (
     <div className="App">
-      <Navbar setImages={setImages} fineArt={fineArt} commissions={commissions} sketchbook={sketchbook} />
-      <Gallery images={images}/>
+      <Navbar setImages={setImages} fineArt={fineArt} commissions={commissions} sketchbook={sketchbook} switchToGallery={switchToGallery} switchToAbout={switchToAbout} />
+      {currentComponent === "Gallery" ? (
+        <Gallery images={images} />
+      ) : (
+        <About />
+      )}
       <Footer artistEmail={artistEmail} instagramLink={instagramLink} />
     </div>
   );
