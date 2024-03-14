@@ -7,11 +7,7 @@ interface NavbarProps {
   commissions: any; // Adjust 'any' to the appropriate type if possible
   sketchbook: any; // Adjust 'any' to the appropriate type if possible
   switchToGallery: () => void; // Add switchToGallery function
-}
-
-interface NavbarProps {
-  switchToGallery: () => void;
-  switchToAbout: () => void;
+  switchToAbout: () => void; // Add switchToAbout function
 }
 
 const Navbar: React.FC<NavbarProps> = ({ setImages, fineArt, commissions, sketchbook, switchToGallery, switchToAbout }) => {
@@ -40,6 +36,11 @@ const Navbar: React.FC<NavbarProps> = ({ setImages, fineArt, commissions, sketch
     switchToGallery();
   };
 
+  const handlePortfolioClick = () => {
+    setImages(fineArt);
+    switchToGallery
+  }
+
   return (
     <div className="navbar">
       <div>
@@ -58,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ setImages, fineArt, commissions, sketch
         onMouseOver={handleMouseOver}
         onMouseLeave={handleMouseLeave}
       >
-        <button>Portfolio</button>
+        <button onClick={handleFineArtClick}>Portfolio</button>
         {dropdownVisible && (
           <div className="dropdown">
             <a href="#" onClick={handleFineArtClick}>Fine Art</a>
@@ -74,12 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ setImages, fineArt, commissions, sketch
 
       <div className="nav-item" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
         <button onClick={switchToAbout}>About</button>
-      </div>
-
-      <div className="nav-item" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
-        <button>Contact</button>
-      </div>
-      
+      </div>      
     </div>
   );
 };
