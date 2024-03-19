@@ -2,7 +2,12 @@ import React from 'react';
 import { FaEnvelope, FaInstagram } from 'react-icons/fa'; // Assuming you're using react-icons for icons
 import './Footer.css';
 
-const Footer = ({ artistEmail, instagramLink }) => {
+interface FooterProps {
+  artistEmail: string;
+  instagramLink: string;
+}
+
+const Footer = ({ artistEmail, instagramLink }: FooterProps) => {
   const handleEmailClick = () => {
     window.location.href = `mailto:${artistEmail}`;
   };
