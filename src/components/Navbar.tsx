@@ -36,11 +36,6 @@ const Navbar: React.FC<NavbarProps> = ({ setImages, fineArt, commissions, sketch
     switchToGallery();
   };
 
-  const handlePortfolioClick = () => {
-    setImages(fineArt);
-    switchToGallery
-  }
-
   return (
     <div className="navbar">
       <div>
