@@ -17,7 +17,7 @@ const Footer = ({ artistEmail, instagramLink }: FooterProps) => {
       <div className="brand-container">
         <div className="brand-icon">
           {/* Insert your artist's brand icon image here */}
-          <img src="src\assets\images\logo1.png" alt="Artist Brand Icon" />
+          <img src="assets\images\logo1.png" alt="Artist Brand Icon" />
         </div>  
         <div className="copyright">
           {/* Add the copyright text */}

@@ -42,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ setImages, fineArt, commissions, sketch
         {" "}
         <img
           id="title-icon"
-          src="src\assets\images\logo1.png"
+          src="assets\images\logo1.png"
           alt="Noemileah-navbar"
           width={800}
           height={228}
