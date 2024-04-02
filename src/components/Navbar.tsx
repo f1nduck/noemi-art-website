@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "./Navbar.css";
 
 interface NavbarProps {
-  setImages: (images: any) => void; // Adjust 'any' to the appropriate type if possible
-  fineArt: any; // Adjust 'any' to the appropriate type if possible
-  commissions: any; // Adjust 'any' to the appropriate type if possible
-  sketchbook: any; // Adjust 'any' to the appropriate type if possible
-  switchToGallery: () => void; // Add switchToGallery function
-  switchToAbout: () => void; // Add switchToAbout function
+  setImages: (images: any) => void;
+  fineArt: any;
+  commissions: any;
+  sketchbook: any;
+  switchToGallery: () => void;
+  switchToAbout: () => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ setImages, fineArt, commissions, sketchbook, switchToGallery, switchToAbout }) => {
