@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaInstagram } from 'react-icons/fa'; // Assuming you're using react-icons for icons
+import { FaEnvelope, FaInstagram } from 'react-icons/fa';
 import './Footer.css';
 
 interface FooterProps {
@@ -16,11 +16,9 @@ const Footer = ({ artistEmail, instagramLink }: FooterProps) => {
     <footer>
       <div className="brand-container">
         <div className="brand-icon">
-          {/* Insert your artist's brand icon image here */}
           <img src="assets\images\logo1.png" alt="Artist Brand Icon" />
         </div>  
         <div className="copyright">
-          {/* Add the copyright text */}
           © 2024 Noemi Naszarkowski
         </div>
       </div>  

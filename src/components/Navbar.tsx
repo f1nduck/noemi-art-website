@@ -13,6 +13,12 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ setImages, fineArt, commissions, sketchbook, switchToGallery, switchToAbout }) => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   const handleMouseOver = () => {
     setDropdownVisible(true);
   };
@@ -38,19 +44,23 @@ const Navbar: React.FC<NavbarProps> = ({ setImages, fineArt, commissions, sketch
 
   return (
     <div className="navbar">
+      <div className="hamburger-menu" onClick={toggleMenu}>
+        MENU
+      </div>
+
       <div>
-        {" "}
         <img
           id="title-icon"
-          src="assets\images\logo1.png"
+          src="assets/images/logo1.png"
           alt="Noemileah-navbar"
           width={800}
           height={228}
-        ></img>
+        />
       </div>
 
+      {/* Apply the conditional 'active' class at this level */}
       <div
-        className="nav-item"
+        className={`nav-item ${isMenuOpen ? "active" : ""}`}
         onMouseOver={handleMouseOver}
         onMouseLeave={handleMouseLeave}
       >
@@ -58,21 +68,18 @@ const Navbar: React.FC<NavbarProps> = ({ setImages, fineArt, commissions, sketch
         {dropdownVisible && (
           <div className="dropdown">
             <a href="#" onClick={handleFineArtClick}>Fine Art</a>
-            <a href="#" onClick={handleCommissionsClick}>
-              Commissions
-            </a>
-            <a href="#" onClick={handleSketchbookClick}>
-              Sketchbook
-            </a>
+            <a href="#" onClick={handleCommissionsClick}>Commissions</a>
+            <a href="#" onClick={handleSketchbookClick}>Sketchbook</a>
           </div>
         )}
       </div>
 
-      <div className="nav-item" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+      <div className={`nav-item ${isMenuOpen ? "active" : ""}`} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
         <button onClick={switchToAbout}>About</button>
-      </div>      
+      </div>
     </div>
-  );
+);
+
 };
 
 export default Navbar;

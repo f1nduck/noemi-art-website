@@ -1,6 +1,6 @@
 footer {
   display: flex;
-  justify-content: space-between; /* Align items to the start and end of the container */
+  justify-content: space-between;
   background-color: #ffffff;
   color: #fff;
   padding: 10px;
@@ -10,13 +10,13 @@ footer {
 
 .brand-icon {
   display: flex;
-  align-items: center; /* Align items vertically */
+  align-items: center;
   position: relative;
 }
 
 .contact {
   display: flex;
-  align-items: center; /* Align items vertically */
+  align-items: center;
 }
 
 .contact button,
@@ -34,7 +34,7 @@ footer {
 
 .contact button:hover,
 .contact a:hover {
-  color: #797979fb; /* Change color on hover */
+  color: #797979fb;
 }
 
 .brand-container {
@@ -50,7 +50,7 @@ footer {
 }
 
 .brand-icon img {
-  width: 40%; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 40%;
+  height: auto;
   margin-bottom: 10px;
 }

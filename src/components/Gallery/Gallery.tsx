@@ -29,7 +29,7 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [selectedImageIndex]); // Re-add the event listener if selectedImageIndex changes
+  }, [selectedImageIndex]);
 
   const openImage = (index: number) => {
     setSelectedImageIndex(index);

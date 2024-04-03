@@ -70,10 +70,44 @@ h1 {
   transition: color 0.2s ease;
 }
 
-/* Highlight on hover */
+
 .dropdown a:hover {
-  color: #3498db; /* Change text color on hover */
+  color: #3498db;
   background-color: #ecf0f1;
 }
 
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-item {
+    display: none;
+  }
+
+  .nav-item.active {
+    display: block;
+  }
+
+  .hamburger-menu {
+    display: block;
+    z-index: 2;
+    position: relative;
+  }
+ 
+  #title-icon {
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* Default state */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
 
