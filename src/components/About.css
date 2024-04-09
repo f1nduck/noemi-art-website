@@ -54,14 +54,17 @@
   .content {
     max-width: 100%; /* Allow content to fill the container */
     padding: 10px; /* Reduced padding inside content area */
+    margin-left: 0;
   }
 
   .heading {
-    font-size: 24px; /* Smaller font size for heading */
+    font-size: 32px; /* Smaller font size for heading */
+    text-align: center;
   }
 
   .paragraph {
     font-size: 16px; /* Smaller font size for paragraph */
     padding: 0 5px; /* Slight padding for text, avoiding edge clashing */
+    text-align: center;
   }
 }
