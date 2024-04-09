@@ -35,3 +35,33 @@
   font-size: 18px;
   text-align: justify;
 }
+
+/* Responsive styles for screens smaller than 600px wide */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px; /* Reduced padding */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center alignment for stacked items */
+  }
+
+  .profilePic {
+    width: 300px; /* Smaller width for the profile picture */
+    height: 300px; /* Maintain aspect ratio */
+    margin-right: 0; /* Remove margin on the right as it's now vertically stacked */
+    margin-bottom: 20px; /* Add some space below the image */
+  }
+
+  .content {
+    max-width: 100%; /* Allow content to fill the container */
+    padding: 10px; /* Reduced padding inside content area */
+  }
+
+  .heading {
+    font-size: 24px; /* Smaller font size for heading */
+  }
+
+  .paragraph {
+    font-size: 16px; /* Smaller font size for paragraph */
+    padding: 0 5px; /* Slight padding for text, avoiding edge clashing */
+  }
+}
