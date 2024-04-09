@@ -1,16 +1,18 @@
 .container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: left;
   padding: 20px;
   max-width: auto;
 }
 
 .profilePic {
-  height: 500px;
+  height: 400px;
   width: auto;
   border-radius: 50%;
+  object-fit: cover;
   margin-right: 20px;
+  
 }
 
 .content {
